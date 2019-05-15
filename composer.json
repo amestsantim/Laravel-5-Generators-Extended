@@ -1,12 +1,12 @@
 {
-  "name": "laracasts/generators",
-  "description": "Extend Laravel 5's generators.",
+  "name": "amestsantim/generators",
+  "description": "Extend Laravel 5's generators (fork of laracasts/generators)",
   "keywords": ["laravel", "generators"],
   "license": "MIT",
   "authors": [
     {
-      "name": "Jeffrey Way",
-      "email": "jeffrey@laracasts.com"
+      "name": "Nahom Tamerat",
+      "email": "nahomt@amestsantim.com"
     }
   ],
   "require": {
