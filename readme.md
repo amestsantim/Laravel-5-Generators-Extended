@@ -2,7 +2,8 @@
 
 [![Build Status](https://travis-ci.org/laracasts/Laravel-5-Generators-Extended.svg?branch=master)](https://travis-ci.org/laracasts/Laravel-5-Generators-Extended)
 
-***Important: This is a fork of the [Laravel-5-Generators-Extended](https://github.com/laracasts/Laravel-5-Generators-Extended) repo forked for the purpose of merging a long time open [pull request](https://github.com/laracasts/Laravel-5-Generators-Extended/pull/90) that adds an optional --path parameter.***
+***Important: This is a fork of the [Laravel-5-Generators-Extended](https://github.com/laracasts/Laravel-5-Generators-Extended) repo forked for the purpose of merging a long time open [pull request](https://github.com/laracasts/Laravel-5-Generators-Extended/pull/90) that adds an optional --path parameter.
+I have also edited the migration stub and removed the id and timestamp fields added by default.***
 
 If you're familiar with my [Laravel 4 Generators](https://github.com/JeffreyWay/Laravel-4-Generators), then this is basically the same thing - just upgraded for Laravel 5.
 
