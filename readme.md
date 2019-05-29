@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/laracasts/Laravel-5-Generators-Extended.svg?branch=master)](https://travis-ci.org/laracasts/Laravel-5-Generators-Extended)
 
 ***Important: This is a fork of the [Laravel-5-Generators-Extended](https://github.com/laracasts/Laravel-5-Generators-Extended) repo forked for the purpose of merging a long time open [pull request](https://github.com/laracasts/Laravel-5-Generators-Extended/pull/90) that adds an optional --path parameter.
-I have also edited the migration stub and removed the id and timestamp fields added by default.***
+I have also edited the migration stub and removed the id and timestamp fields added by default. I have added a --timestamps switch to control the timestamps. I have also added a --foreignReferenceName= option to pass in the name of the id column on the referenced table, if you need it to be different from the default of 'id'***
 
 If you're familiar with my [Laravel 4 Generators](https://github.com/JeffreyWay/Laravel-4-Generators), then this is basically the same thing - just upgraded for Laravel 5.
 
@@ -21,7 +21,7 @@ L5 includes a bunch of generators out of the box, so this package only needs to 
 ### Step 1: Install Through Composer
 
 ```
-composer require amestsantim/generators --dev
+composer require amestsantim/generators
 ```
 
 ### Step 2: Run Artisan!
@@ -34,7 +34,7 @@ You're all set. Run `php artisan` from the console, and you'll see the new comma
 ### Step 1: Install Through Composer
 
 ```
-composer require amestsantim/generators --dev
+composer require amestsantim/generators
 ```
 
 ### Step 2: Add the Service Provider
