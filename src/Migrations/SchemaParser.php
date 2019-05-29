@@ -141,7 +141,10 @@ class SchemaParser
      */
     private function getTableNameFromForeignKey($key)
     {
-        return str_plural(str_replace('_id', '', $key));
+        if(strpos($key, '_id')){
+            return str_plural(str_replace('_id', '', $key));
+        }
+        return $key;
     }
 
     /**
