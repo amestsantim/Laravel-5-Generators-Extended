@@ -224,7 +224,7 @@ class MigrationMakeCommand extends Command
     protected function replaceSchema(&$stub)
     {
         if ($schema = $this->option('schema')) {
-            $schema = (new SchemaParser)->parse($schema);
+            $schema = (new SchemaParser)->parse($schema, $this->option('foreignReferenceName'));
         }
 
         $schema = (new SyntaxBuilder)->create($schema, $this->meta);

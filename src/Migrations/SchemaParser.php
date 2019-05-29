@@ -11,6 +11,8 @@ class SchemaParser
      */
     private $schema = [];
 
+    private $foreignReferenceName = 'id';
+
     /**
      * Parse the command line migration schema.
      * Ex: name:string, age:integer:nullable
@@ -18,8 +20,12 @@ class SchemaParser
      * @param  string $schema
      * @return array
      */
-    public function parse($schema)
+    public function parse($schema, $foreignReferenceName)
     {
+        if($foreignReferenceName){
+            $this->foreignReferenceName = $foreignReferenceName;
+        }
+        
         $fields = $this->splitIntoFields($schema);
 
         foreach ($fields as $field) {
@@ -124,8 +130,9 @@ class SchemaParser
     private function addForeignConstraint($segments)
     {
         $string = sprintf(
-            "%s:foreign:references('id'):on('%s')",
+            "%s:foreign:references('%s'):on('%s')",
             $segments['name'],
+            $this->foreignReferenceName,
             $this->getTableNameFromForeignKey($segments['name'])
         );
 
