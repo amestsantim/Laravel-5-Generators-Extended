@@ -265,6 +265,7 @@ class MigrationMakeCommand extends Command
     {
         return [
             ['schema', 's', InputOption::VALUE_OPTIONAL, 'Optional schema to be attached to the migration', null],
+            ['foreignReferenceName', 's', InputOption::VALUE_OPTIONAL, 'Optional, name of the id column on the referenced table (defaults to id)', 'id'],
             ['model', null, InputOption::VALUE_OPTIONAL, 'Want a model for this table?', true],
             ['path', null, InputOption::VALUE_OPTIONAL, 'Optional path for a migration.', false],
         ];
